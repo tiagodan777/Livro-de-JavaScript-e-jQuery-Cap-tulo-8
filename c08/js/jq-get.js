@@ -1,9 +1,9 @@
-$('div a').on('click', function(e) {
+$('#selector img').on('click', function(e) {
     e.preventDefault();
 
-    var queryString = 'vote=' + $(e.target).attr('id');
+    var queryString = 'vote=' + $(this).attr('id');
 
     $.get('votes.php', queryString, function(data) {
-        $('#selector').html('');
+        $('#selector').html(data);
     })
-});
+})

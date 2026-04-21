@@ -3,7 +3,7 @@ $('nav a').on('click', function(e) {
 
     var url = this.href;
 
-    $('#conteiner').remove();
+    $('#container').remove();
     $('#content').load(url + ' #content').hide().fadeIn('slow');
 
     $('nav a.current').removeClass('current');
